@@ -1,0 +1,78 @@
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define MOUSE 0
+
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <0>;
+};
+
+/ {
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &lt 1 MB4   &mkp MB2
+                &mkp MB1    &mt MB5 MB3 
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+                &trans  &trans
+                &trans  &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+                &trans  &trans
+                &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+                &trans  &trans
+                &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+                &trans  &trans
+                &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+                &trans  &trans
+                &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+                &trans  &trans
+                &trans  &trans
+            >;
+        };
+
+
+    // //ユーザがinput-processorsを変更したい場合はここに書く
+    // &trackball_peripheral_listener {
+    //     input-processors =
+    //         <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
+    //         <&zip_temp_layer 3 500>;
+    // };
+};

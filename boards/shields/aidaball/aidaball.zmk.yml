@@ -1,0 +1,8 @@
+file_format: "1"
+id: aidaball
+name: aidaball
+type: shield
+url: https://github.com/PowerEnterKey/zmk-AIDABALL
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
