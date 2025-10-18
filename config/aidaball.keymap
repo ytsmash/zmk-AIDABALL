@@ -15,7 +15,24 @@
 };
 
 / {
+    behaviors {
+        mb5_mb3_holdpress: mb5_mb3_holdpress {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MB5_MB3_HOLD_PRESS";
 
+            // タップ時：MB5クリック
+            // ホールド時：押下（&mpp）、離し（&mpr）を制御
+            bindings = <&mkp MB5>, <&mpp MB3>, <&mpr MB3>;
+
+            // hold-tapは通常2つのbindingですが、ここでは3つ指定しています。
+            // そのため下記の拡張版が必要になります
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred"; // 長押しを優先（推奨設定）
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
