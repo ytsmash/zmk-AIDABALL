@@ -49,10 +49,11 @@
     device = <&trackball>;
     scroller {
         layers = <1>;
-        input-processors = 
-                <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-                <&zip_xy_scaler 1 16>,                              //移動量1/16
-                <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;   //カーソル移動のY方向を反転する
+        input-processors = <
+                &zip_xy_to_scroll_mapper                        //スクロールモードに変更
+                &zip_xy_scaler 1 16                             //移動量1/16
+                //&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT  //カーソル移動のY方向を反転する
+        >;
     };
 };
 

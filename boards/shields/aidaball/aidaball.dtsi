@@ -52,7 +52,7 @@
         compatible = "zmk,input-listener";
         status = "disabled";
         input-processors = 
-            //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //カーソル移動のXとYを入れ替える
-            <&zip_xy_scaler 1 6>;                               //カーソル移動量を1/6倍に変更
+            //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,  //カーソル移動のXとYを入れ替える
+            <&zip_xy_scaler 1 4>;                           //カーソル移動量を1/4倍に変更
     };
 };
