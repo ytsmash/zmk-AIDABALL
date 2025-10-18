@@ -53,7 +53,7 @@
         status = "disabled";
         input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //カーソル移動のXとYを入れ替える
-            <&zip_xy_scaler 1 7>;                               //カーソル移動量を1/7倍に変更
+            <&zip_xy_scaler 1 8>;                               //カーソル移動量を1/8倍に変更
             //<&zip_xy_to_scroll_mapper>;                         //スクロールモードに変更
             //<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;   //カーソル移動のY方向を反転する
     };
