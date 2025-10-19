@@ -37,15 +37,15 @@
 
         layer_1 {
             bindings = <
-                &trans  &trans
-                &trans  &trans
+                &trans  &mo 2
+                &trans  &mkp MB5
             >;
         };
 
         layer_2 {
             bindings = <
-                &trans  &trans
-                &trans  &trans
+                &trans          &trans
+                &bt BT_SEL 0    &bt BT_SEL 1
             >;
         };
 
