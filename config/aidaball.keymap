@@ -37,7 +37,7 @@
 
         layer_1 {
             bindings = <
-                &kp LC(LS(TAB))  &mo 2
+                &kp LC(LS(TAB))  &kp LG(W)
                 &kp LC(TAB)      &mkp MB5
             >;
         };
