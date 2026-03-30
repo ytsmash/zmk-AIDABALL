@@ -51,8 +51,7 @@
         layers = <1>;
         input-processors = 
                 <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-                <&zip_scroll_scaler 1 15>,                          //移動量1/15
-                <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;   //カーソル移動のY方向を反転する
+                <&zip_scroll_scaler 1 30>;                          //移動量1/30
     };
 };
 

@@ -20,32 +20,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LT_MKP";
             bindings = <&mo>, <&mkp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        tap_dance1: tap_dance1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE1";
-            #binding-cells = <0>;
-            bindings = <&mkp MB4>, <&kp LC(LS(TAB))>;
-        };
-
-        tap_dance2: tap_dance2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE2";
-            #binding-cells = <0>;
-            bindings = <&mkp MB5>, <&kp LC(TAB)>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        aa {
-            bindings = <&mkp MB3>;
-            key-positions = <2 3>;
         };
     };
 
@@ -54,58 +30,51 @@
 
         default_layer {
             bindings = <
-&tap_dance1  &tap_dance2
-&mkp MB1     &mkp MB2
+                &mkp MB4         &mkp MB5
+                &mkp MB1         &lt_mkp 1 MB2
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &mo 2
-&trans  &trans
+                &kp LC(LS(TAB))  &kp LG(W)
+                &kp LC(TAB)      &mkp MB5
             >;
         };
 
         layer_2 {
             bindings = <
-&trans        &trans
-&bt BT_SEL 0  &bt BT_SEL 1
+                &trans          &trans
+                &bt BT_SEL 0    &bt BT_SEL 1
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans
-&trans  &trans
+                &trans  &trans
+                &trans  &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans
-&trans  &trans
+                &trans  &trans
+                &trans  &trans
             >;
         };
 
         layer_5 {
             bindings = <
-&trans  &trans
-&trans  &trans
+                &trans  &trans
+                &trans  &trans
             >;
         };
 
         layer_6 {
             bindings = <
-&trans  &trans
-&trans  &trans
+                &trans  &trans
+                &trans  &trans
             >;
         };
-
-        // //ユーザがinput-processorsを変更したい場合はここに書く
-        // &trackball_listener {
-        //     input-processors =
-        //         <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-        //         <&zip_temp_layer 3 500>;
-        // };
     };
 };
