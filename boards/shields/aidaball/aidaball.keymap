@@ -30,15 +30,15 @@
 
         default_layer {
             bindings = <
-                &lt_mkp 1 MB4   &lt_mkp 3 MB5
-                &mkp MB1         &mkp MB2
+                &mkp MB4         &mkp MB5
+                &mkp MB1         &lt_mkp 1 MB2
             >;
         };
 
         layer_1 {
             bindings = <
-                &trans  &mo 2
-                &trans  &mkp MB5
+                &kp LC(LS(TAB))  &mo 2
+                &kp LC(TAB)      &mkp MB5
             >;
         };
 
@@ -51,8 +51,8 @@
 
         layer_3 {
             bindings = <
-                &kp LC(LS(TAB))  &trans
-                &kp LC(TAB)      &mo 2
+                &trans  &trans
+                &trans  &trans
             >;
         };
 
